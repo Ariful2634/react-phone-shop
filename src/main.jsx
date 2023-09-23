@@ -12,13 +12,14 @@ import Home from './Home/Home';
 import Favourites from './Header/Favourites/Favourites';
 import Login from './Login/Login';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
     children:[
       {
-        path:'/home',
+        path:'/',
         element:<Home></Home>
       },
       {
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
-      }
+      },
+     
     ]
   },
 ]);

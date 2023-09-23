@@ -1,9 +1,13 @@
+import Banner from "../Banner/Banner";
+import DisplayPhone from "../DisplayPhone/DisplayPhone";
 
 
 const Home = () => {
     return (
         <div>
-            <h2>This is home</h2>
+            
+            <Banner></Banner>
+            <DisplayPhone></DisplayPhone>
         </div>
     );
 };
