@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const PhoneCard = ({phone}) => {
-    const {image,rating,phone_name,brand_name,price}=phone
+    const {id,image,rating,phone_name,brand_name,price}=phone
     return (
         <div className='border p-4 rounded-lg space-y-4'>
             <div className='flex justify-center mb-4'><img className='w-[250px] h-[250px] rounded-lg' src={image} alt="" /></div>
@@ -13,7 +15,7 @@ const PhoneCard = ({phone}) => {
                <p>$ {price}</p>
             </div>
             <div className="text-center">
-                <button className="btn btn-primary">See Details</button>
+                <Link to={`/phone/${id}`}><button className="btn btn-primary">See Details</button></Link>
             </div>
         </div>
     );

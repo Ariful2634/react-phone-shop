@@ -11,6 +11,7 @@ import Root from './Root/Root';
 import Home from './Home/Home';
 import Favourites from './Header/Favourites/Favourites';
 import Login from './Login/Login';
+import PhoneDetails from './PhoneDetails/PhoneDetails';
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
         path:'/login',
         element:<Login></Login>
       },
+      {
+        path:'/phone/:id',
+        element:<PhoneDetails></PhoneDetails>,
+        loader:()=>fetch('../phone.json')
+      }
      
     ]
   },
